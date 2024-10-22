@@ -6,9 +6,36 @@ This Power BI project analyzes supply chain decisions, specifically comparing th
 
 ## Data Sources
 The project uses three main data sources:
-1. Quotes Table: Contains supplier quotes for different parts and volumes.
-2. Internal Manufacturing Estimates Table: Includes cost estimates for in-house production.
-3. Product Dimensions: Provides information about the parts and associated projects.
+
+**1. Quotes Table:** Contains supplier quotes for different parts and volumes.
+
+| Column | Description |
+|--------|-------------|
+| Supplier | The name of the supplier providing the quote. |
+| Part_Number | The identification number for the particular product or component being quoted. |
+| Volume | The minimum volume that must be ordered for the particular quoted cost. |
+| Quoted_Cost | The cost per unit that must be paid to the supplier for purchasing the goods. |
+| Non_recurring_expenses | The one-time cost to enable production at the minimum volume quoted. |
+
+**2. Internal Manufacturing Estimates Table:** Includes cost estimates for in-house production.
+
+| Column | Description |
+|--------|-------------|
+| Machine_Model | The model of manufacturing equipment. |
+| Part_Number | The identification number for the particular product or component whose cost is being estimated. |
+| Cost_per_Unit | The marginal production costs associated with manufacturing another unit. This would include material cost, direct labor and variable overheads. |
+| Unit_Capacity | The unit capacity is the number of units that the machine model can produce when it is fully used for the part number whose cost is being estimated. |
+| Machine_Fixed_Cost | The one-time cost of acquiring another machine for manufacturing. |
+| Existing_Capacity | The available capacity of the current machinery in the company. |
+| Machine_Fixed_Overhead_Rate | The cost of owning and operating the manufacturing equipment that does not scale with changes in production volume. |
+
+**3. Product Dimensions:** Provides information about the parts and associated projects.
+
+| Column | Description |
+|--------|-------------|
+| Part_Number | The identification number for the particular product or component. |
+| Part_Name | The name of the product or component. |
+| Project | The name of the project that the product or component is associated with. |
 
 ## Report Structure and Key Visualizations
 The Power BI report consists of several pages:
